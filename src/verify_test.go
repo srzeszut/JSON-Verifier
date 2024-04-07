@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -25,7 +26,9 @@ func TestVerifyJSONWithInvalidResource(t *testing.T) {
 
 	if verifyJSON(jsonData) {
 		t.Error("Expected JSON file to be invalid, but got valid")
+		return
 	}
+	fmt.Println("TestVerifyJSONWithInvalidResource passed")
 }
 
 func TestVerifyJSONWithValidResource(t *testing.T) {
@@ -49,7 +52,9 @@ func TestVerifyJSONWithValidResource(t *testing.T) {
 
 	if !verifyJSON(jsonData) {
 		t.Error("Expected JSON file to be valid, but got invalid")
+		return
 	}
+	fmt.Println("TestVerifyJSONWithValidResource passed")
 }
 
 func TestVerifyJSONWithMultipleStatements(t *testing.T) {
@@ -103,12 +108,15 @@ func TestVerifyJSONWithMultipleStatements(t *testing.T) {
 
 	if verifyJSON(jsonDataInvalid) {
 		t.Error("Expected JSON file to be invalid, but got valid")
+		return
 
 	}
 	if !verifyJSON(jsonDataValid) {
 		t.Error("Expected JSON file to be valid, but got invalid")
+		return
 
 	}
+	fmt.Println("TestVerifyJSONWithMultipleStatements passed")
 
 }
 
@@ -156,12 +164,16 @@ func TestVerifyJSONWithMultipleResources(t *testing.T) {
 
 	if !verifyJSON(validJsonData) {
 		t.Error("Expected JSON file to be valid, but got invalid")
+		return
 
 	}
 	if verifyJSON(invalidJsonData) {
 		t.Error("Expected JSON file to be invalid, but got valid")
+		return
 
 	}
+
+	fmt.Println("TestVerifyJSONWithMultipleResources passed")
 
 }
 
@@ -185,5 +197,8 @@ func TestVerifyJSONWithInvalidFormat(t *testing.T) {
 
 	if verifyJSON(jsonDataWithoutResource) {
 		t.Error("Expected JSON file to be invalid, but got valid")
+		return
 	}
+	fmt.Println("TestVerifyJSONWithInvalidFormat passed")
+
 }

@@ -7,14 +7,14 @@ Method return logical false if an input JSON Resource field contains a single as
 
 ## Requirements
 
-- Go (version 1.16 or newer)
+- Go (version 1.22 or newer)
 
 ## Installation and Execution
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/srzeszut/JSON-Verifier.git
+    git clone https://github.com/your_repository.git
     ```
 
 2. Run the program with:
