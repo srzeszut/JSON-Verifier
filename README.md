@@ -14,7 +14,7 @@ Method return logical false if an input JSON Resource field contains a single as
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_repository.git
+    git clone https://github.com/srzeszut/JSON-Verifier.git
     ```
 
 2. Run the program with:
